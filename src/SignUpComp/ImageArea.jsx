@@ -23,6 +23,12 @@ const ImageAreaCont = styled.div`
       height: 100vh;
       object-fit: cover;
     }
+    @media screen and (max-width:1200px){
+      flex: 1.5;
+    }
+    @media screen and (max-width:768px){
+       display: none;
+    }
 `
 const TextArea = styled.div`
     right: 0;
@@ -50,6 +56,8 @@ const TextArea = styled.div`
 const Heading = styled.div`
     font-size: 30px;
     font-weight: 700;
+    text-align: center;
+    width: 95%;
 `
 const Title = styled.div`
     font-size: 15px;

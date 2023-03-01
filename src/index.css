@@ -17,6 +17,10 @@ body{
 :focus-visible {
   outline: -webkit-focus-ring-color auto 0px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .prevArrow{
   position: absolute;
   top: 50%;
