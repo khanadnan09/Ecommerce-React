@@ -58,7 +58,7 @@ a {
 .slick-dots li.slick-active button:before {
   opacity: 1 !important;
 }
-@media screen and (max-width:992px) {
+@media screen and (max-width:1200px) {
  body{
   -webkit-tap-highlight-color: transparent;
  } 
@@ -95,4 +95,18 @@ a {
 }
 .ProductSilder .nextArrow {
   right: -1.6%;
+}
+.success{
+  font-size: 12px;
+  background-color: #008000;
+  padding: 3px 12px;
+  color: #fff;
+  border-radius: 50px;
+}
+.danger{
+  font-size: 12px;
+  background-color: #ff0000;
+  padding: 3px 12px;
+  color: #fff;
+  border-radius: 50px;
 }

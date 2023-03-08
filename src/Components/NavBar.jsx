@@ -13,8 +13,8 @@ const NavBar = () => {
             </Logo>
             <SearchBar><input type="search" placeholder='What do you need ?' /><BiSearch /></SearchBar>
             <NavIcons>
-                <span><AiFillHeart /><span>10</span></span>
-                <span><HiShoppingCart /><span>8</span></span>
+               <Link to={"/wishlist"}><span><AiFillHeart /><span>10</span></span></Link>
+               <Link to={"/cart"}><span><HiShoppingCart /><span>8</span></span></Link> 
                 <Link to={"/login"}><Login>Log In</Login></Link>  
             </NavIcons>
         </Nav>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {Link} from 'react-router-dom'
 const Offers = () => {
   return (
     <OfferConatiner>
@@ -91,7 +91,7 @@ const Offers = () => {
     }}>
         <SpecailCard>
           Sign in for your best experience
-          <button>Sign In</button>
+          <button><Link to={"login"} style={{display:"block",padding:"10px"}}>Sign In</Link></button>
         </SpecailCard>
       </Offer>
     </OfferConatiner>
@@ -126,7 +126,6 @@ const SpecailCard = styled.div`
    button{
     background-color: #000;
     margin-top: 50px;
-    padding: 10px;
     border: 0px;
     font-size: 1.2rem;
     color: #fff;
