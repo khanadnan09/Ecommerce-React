@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HiShoppingCart } from 'react-icons/hi';
-import { TiEye } from 'react-icons/ti';
-import { RxCross2 } from 'react-icons/rx';
-import {Link} from 'react-router-dom'
-const WishListTable = () => {
+import { TiEye, TiMinus } from 'react-icons/ti';
+import { RxCross2, RxPlus } from 'react-icons/rx';
+
+const CartTable = () => {
     return (
         <>
             <TableConatiner>
@@ -14,9 +13,9 @@ const WishListTable = () => {
                             <th>Product Image</th>
                             <th>Product Name</th>
                             <th>Price</th>
+                            <th>Total Price</th>
                             <th>Date</th>
-                            <th>Availiblity</th>
-                            <th>Add To Cart</th>
+                            <th>Quantity</th>
                             <th>Remove</th>
                         </tr>
                     </thead>
@@ -33,9 +32,13 @@ const WishListTable = () => {
                                 </span>
                             </td>
                             <td>₹1,40,000</td>
+                            <td>₹2,80,000</td>
                             <td>March,28,2020</td>
-                            <td><span className='success'>In stock</span></td>
-                            <td><button>Add To Cart<HiShoppingCart /></button></td>
+                            <td>
+                                <span>
+                                    <span><RxPlus /></span>8<span><TiMinus /></span>
+                                </span>
+                            </td>
                             <td><RxCross2 /></td>
                         </tr>
                         <tr>
@@ -51,9 +54,13 @@ const WishListTable = () => {
                                 </span>
                             </td>
                             <td>₹4,000</td>
+                            <td>₹6,000</td>
                             <td>March,20,2020</td>
-                            <td><span className='danger'>Out of stock</span></td>
-                            <td><button>Add To Cart<HiShoppingCart /></button></td>
+                            <td>
+                                <span>
+                                    <span><RxPlus /></span>8<span><TiMinus /></span>
+                                </span>
+                            </td>
                             <td><RxCross2 /></td>
                         </tr>
                         <tr>
@@ -68,9 +75,13 @@ const WishListTable = () => {
                                 </span>
                             </td>
                             <td>₹39,000</td>
+                            <td>₹50,000</td>
                             <td>February,9,2020</td>
-                            <td><span className='danger'>Out of stock</span></td>
-                            <td><button>Add To Cart<HiShoppingCart /></button></td>
+                            <td>
+                                <span>
+                                    <span><RxPlus /></span>8<span><TiMinus /></span>
+                                </span>
+                            </td>
                             <td><RxCross2 /></td>
                         </tr>
                         <tr>
@@ -85,9 +96,13 @@ const WishListTable = () => {
                                 </span>
                             </td>
                             <td>₹1,40,000</td>
+                            <td>₹1,40,000</td>
                             <td>February,2,2020</td>
-                            <td><span className='success'>In stock</span></td>
-                            <td><button>Add To Cart<HiShoppingCart /></button></td>
+                            <td>
+                                <span>
+                                    <span><RxPlus /></span>8<span><TiMinus /></span>
+                                </span>
+                            </td>
                             <td><RxCross2 /></td>
                         </tr>
                         <tr>
@@ -102,19 +117,18 @@ const WishListTable = () => {
                                 </span>
                             </td>
                             <td>₹9,199</td>
+                            <td>₹10,199</td>
                             <td>January,30,2020</td>
-                            <td><span className='success'>In stock</span></td>
-                            <td><button>Add To Cart<HiShoppingCart /></button></td>
+                            <td>
+                                <span>
+                                    <span><RxPlus /></span>8<span><TiMinus /></span>
+                                </span>
+                            </td>
                             <td><RxCross2 /></td>
                         </tr>
                     </tbody>
                 </table>
-
             </TableConatiner>
-            <Button>
-                <Link to={"/"}>Continue Shopping</Link>
-                <Link to={"/cart"}>Go To Cart</Link>
-            </Button>
         </>
     )
 }
@@ -179,27 +193,26 @@ const TableConatiner = styled.div`
         }
     }
    }
-   td:nth-child(2),td:nth-child(3),td:nth-child(4){
+   td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5){
     font-size: 13px;
     font-weight: 500;
    }
    td:nth-child(6){
-    button{
+    span{
         display: flex;
-        margin: auto;
+        justify-content: center;
         align-items: center;
+      svg{
+        margin: 0 10px;
         cursor: pointer;
         background-color: var(--primary-color);
         color: #fff;
-        padding: 7px 12px;
-        font-size: 13px;
+        font-size: 27px;
+        padding: 0px 6px;
         border: none;
         border-radius: 0.2rem;
         box-shadow: 0 0.5rem 1.125rem -0.5rem var(--primary-color);
-        svg{
-            margin-left: 5px;
-            font-size: 15px;
-        }
+      }  
     }
     @media screen and (max-width:1200px){
         min-width: 150px;
@@ -225,23 +238,4 @@ const TableConatiner = styled.div`
         margin-right: 10px;
     }
 `
-const Button = styled.div`
-    margin: 30px 0;
-    text-align: center;
-    a{
-        border: none;
-        color: #fff;
-        padding: 7px 17px;
-        background-color: #f7a518;
-        box-shadow: #f7a5188c 0px 2px 8px 0px;
-        font-size: 14px;
-        margin-right: 10px;
-        cursor: pointer;
-        :nth-child(2){
-            background-color: #000;
-            box-shadow: #979797b8 0px 2px 8px 0px;
-        }
-    }
-    
-    `
-export default WishListTable
+export default CartTable
