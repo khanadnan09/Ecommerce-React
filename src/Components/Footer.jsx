@@ -21,7 +21,7 @@ const Footer = () => {
                    <span><FaFacebookF /><FaTwitter /><FaLinkedinIn /><FaPinterest /></span> 
                 </SocialMedia>
             </FooterConatiner>
-            <Copyright>© 2022 Foodies. All Rights Reserved by NSAsOFT</Copyright>
+            <Copyright>© 2023 Shop23. All Rights Reserved by NSAsOFT</Copyright>
         </>
     )
 }
